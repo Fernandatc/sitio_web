@@ -1,0 +1,367 @@
+*{
+    /*👇 esto poner siempre al comienzo quita todos los estilos x defecto */
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}   
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+.contenedor{
+    width: 90%;
+    max-width: 1286px;
+    overflow: hidden;
+    margin:auto;
+    padding:60PX 0;
+}
+header{
+    height: 100vh;
+
+    background-image: linear-gradient(to top , rgb(161 ,140, 209, 0.5) 0%, rgb(251, 194, 235 , 0.5) 100%) , url(chica_com.jpg) ;
+    background-position: center;/* 👉para centrar la img*/
+    background-repeat: no-repeat;/*👉 sirve para que no se repita la img en caso no entre*/
+    background-size: cover;/*👉sirve para que entre en toda el espacio de la cja*/
+    background-attachment: fixed;
+    
+} 
+.head{
+    text-align: center;
+    padding: 0%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #FFF;
+}
+/* sirve para que el scroll tenga animacion👇*/
+:root{
+    scroll-behavior: smooth;
+}
+.hamburger{
+    /* z-index:100; */
+    position: fixed;
+    top:30px;
+    right: 30px;
+    background: #FFF;
+    width: 50PX;
+    height: 50PX;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgb(0,0,0.5) ;
+    cursor: pointer ;}
+
+.menu-hamburgesa{
+    top:0;
+    right: 0;
+    position:fixed;
+    width: 30vw;
+    height: 100%;
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; /*espacio alos lados  */
+    align-items: center;/*centra los items  */
+    box-shadow: 0 0 6px rgb(0,0,0.5) ;
+    transform: translate(110%);
+}
+.columna-menu:hover{
+
+    cursor: pointer;
+}
+.spread{
+    transform: translate(0);
+}
+.menu-hamburgesa a {
+    color: #fff;
+    text-decoration:none;
+}
+h1{
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+.copy{
+    font-weight: 300;
+    font-size: 25px;
+}
+/* SERVICIOS */
+.subtitulo{
+    margin-bottom: 40px;
+    font-size: 40px;
+    font-weight: 300;
+    color: #9f8ad0;
+    text-align: center;
+
+}
+
+.contenedor-service{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;  
+    flex-wrap: wrap;
+
+
+}
+.contenedor-service img {
+    width: 40%;
+}
+.checklist-service{
+    width: 45%;
+}
+.service{
+    margin-bottom: 20px;
+}
+.n-service{
+    margin-bottom: 7px;
+    color: #9f8ad0;
+}
+.number{
+    display: inline-block;
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    color: #FFF;
+    font-weight: 700;
+    margin-right: 5px;
+}
+/* GALERIA */
+.gallery{
+    background-color: #f2f2f2;
+}
+.contenedor-galeria{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap ;
+}
+
+.img-galeria{
+    object-fit: cover;
+    display: inline-block;
+    width: 30%;
+    box-shadow: 0 0 6px ;
+    cursor: pointer;
+    margin-bottom: 15px;
+    
+}
+/* IMG GALERIA PRESENTACION */
+.img-light{
+    position: fixed;
+    background:rgb(0,0,0 , .5) ; 
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(110%);
+    transition: transform .2s ease-in-out;
+}
+
+.show{
+    transform: translate(0); 
+}
+.agregar-img{
+    object-fit: cover;
+    width: 60%;
+    border-radius: 10px;
+    transition: transform .3s .2s;
+    transform: scale(0);
+}
+.show-img{
+    transform: scale(1);
+}
+
+.close{
+    position: absolute;
+    cursor: pointer;
+    top:15px;
+    right: 15px;
+    width: 50px;
+}
+
+
+/* EXPERTOS */
+.experts{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+.content-expert{
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+.content-expert img{
+    width: 80%;
+    display: block;
+    margin: 0  auto;
+}
+
+.n-experts{
+    display: inline-block;
+    width: 100%;
+    margin-top: 20PX;
+    font-weight: 400;
+}
+/* FOOTER */
+
+footer{
+    background-color: #9f8ad0;
+    padding-bottom: 0.1px;
+}
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 60px;
+    padding-bottom:60px ;
+    align-items: center;
+}
+.contact-us{
+    color: #FFF;
+    width: 48%;
+}
+.brand{
+    font-weight: 700;
+    font-size: 40px;
+}
+.brand+p{
+    font-weight: 500;
+}
+.social-media{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+
+}
+.social-media-icon{
+display: inline-block;
+margin-left: 20px;
+width: 60px;
+height: 60px;
+border-radius: 50%;
+text-align: center;
+cursor: pointer;
+text-align: center;
+border: 1px solid #fff;
+}
+
+.social-media-icon:hover{
+    background: rgba(255, 255, 255, 0.662);
+    color: #9f8ad0;
+}
+
+.social-media-icon i{
+    font-size:30px;
+    line-height:60px;color: #FFF;
+}
+    
+.line{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 2px;
+    background-color: #fff;
+    margin-bottom: 60px;
+}
+/* responsive */
+@media screen and ( max-width: 800px){  
+    .menu-hamburgesa{
+        width: 50vw;
+    }
+    .titulo{
+        font-size: 40px;
+        font-weight: 500;
+    }
+    .subtitulo{
+        font-size: 25px;
+        font-weight: 400;
+    }
+    .contenedor-service img {
+        width: 80%;
+        margin-bottom: 40px;
+    }
+    .checklist-service {
+        width: 80%;
+    }
+    .service{
+        margin-bottom: 40px;
+    }
+    .agregar-img{
+        width: 80%;
+    }
+    .img-galeria{
+        width: 80%;
+    }
+    .subtitulo{
+        font-size: 40px;
+        font-weight: 500;
+    }
+    .content-expert{
+        width: 80%;
+        margin-top: 35px;
+    }
+    .n-experts{
+        font-size: 20px;
+    }
+    .footer-content{
+        justify-content: center;
+    }
+    .social-media{
+        width: 80%;
+        justify-content: space-evenly;
+
+    }
+
+    .social-media i {
+        margin-left: 0;
+    }
+
+    .contact-us{
+        text-align: center;
+        width: 80%;
+        margin-bottom: 40px;
+    }
+
+}
+@media screen and (width:500px){
+    .menu-hamburgesa{
+        width: 65vw;
+
+    }
+    .agregar-img{
+        width: 95%;
+    }
+    .hamburger{
+        top: 20px;
+        left: 20px;
+    }
+    .titulo{
+        font-size: 20px;
+        font-weight: 400px;
+    }
+
+    .subtitulo{
+        font-size: 18px;
+        font-weight: 4s00;
+    }
+    .social-media{
+        width: 100%;
+    }
+    .contact-us{
+        width: 90%;
+    }
+}
+
+
+
+
+
+/* 👇
+👉*/
